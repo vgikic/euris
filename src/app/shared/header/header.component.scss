@@ -1,0 +1,36 @@
+@import "../../../styles/themes.scss";
+
+header {
+  margin-bottom: 20px;
+  background-color: mat-color($primary);
+  text-align: center;
+  height: 50px;
+
+  nav {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    li {
+      cursor: pointer;
+      margin: 10px;
+      list-style-type: none;
+
+      a {
+        color: black;
+        font-size: 18px;
+        text-decoration: none;
+
+        &.active-route {
+          font-weight: bold;
+          color: white;
+        }
+
+      }
+
+    }
+
+  }
+
+}

@@ -1,0 +1,53 @@
+.user-preview {
+  &.active {
+    visibility: visible;
+  }
+  visibility: hidden;
+}
+.mat-spinner {
+  &.visible {
+    visibility: visible;
+  }
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  z-index: 9999;
+  visibility: hidden;
+}
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.script-loader {
+  &.visible {
+    visibility: visible;
+  }
+  position: absolute;
+  top: 30%;
+  justify-content: center;
+  visibility: hidden;
+  z-index: 9999;
+  color: mat-color(blue);
+}
+
+.mat-spinner {
+  margin-top: -50px;
+  margin-left: -50px;
+}
+
+.mat-spinner.mat-progress-spinner.mat-primary {
+  position: fixed;
+}
+
+._overlay {
+  position: fixed;
+  display: block;
+  background-color: rgba(255, 255, 255, 0.8);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}

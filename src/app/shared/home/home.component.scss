@@ -1,0 +1,22 @@
+$easeInTime : 3s;
+
+img {
+  max-width: 100%;
+}
+
+.fade-in {
+  animation: fadeIn ease $easeInTime;
+  -webkit-animation: fadeIn ease $easeInTime;
+  -moz-animation: fadeIn ease $easeInTime;
+  -o-animation: fadeIn ease $easeInTime;
+  -ms-animation: fadeIn ease $easeInTime;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,18 @@
+@import "../../../styles/themes.scss";
+
+footer {
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: mat-color($primary);
+  text-align: center;
+  margin-top: 20px;
+  .icon {
+    font-size: 36px;
+    color: white;
+    margin: auto;
+  }
+  p {
+    color: white;
+    font-size: 18px;
+  }
+}

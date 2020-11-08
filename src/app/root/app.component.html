@@ -1,0 +1,10 @@
+<div class="main-container mat-app-background">
+  <div>
+    <euris-header *ngIf="router.url !=='/home'"></euris-header>
+    <router-outlet></router-outlet>
+  </div>
+</div>
+<section>
+  <mat-spinner id="loader" class="mat-spinner"></mat-spinner>
+  <div id="overlay" role="alert"></div>
+</section>

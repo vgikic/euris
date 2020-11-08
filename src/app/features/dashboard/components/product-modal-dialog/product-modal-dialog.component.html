@@ -1,0 +1,66 @@
+<div class="container">
+  <h2 mat-dialog-title>Create product</h2>
+  <mat-dialog-content class="mat-typography">
+    <form *ngIf="productFormGroup" [formGroup]="productFormGroup">
+
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Title</mat-label>
+          <input matInput formControlName="title" placeholder="Title" [errorStateMatcher]="esm" type="text">
+          <mat-icon matSuffix>title</mat-icon>
+          <mat-error *ngIf="productFormGroup.controls.title.hasError('required')"><strong>Title</strong> field is
+            required.</mat-error>
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Category</mat-label>
+          <input matInput formControlName="category" placeholder="Category" [errorStateMatcher]="esm" type="text">
+          <mat-icon matSuffix>category</mat-icon>
+          <mat-error *ngIf="productFormGroup.controls.category.hasError('required')"><strong>Category</strong> field is
+            required.</mat-error>
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Employee</mat-label>
+          <input matInput formControlName="employee" placeholder="Eployee" [errorStateMatcher]="esm" type="text">
+          <mat-icon matSuffix>person</mat-icon>
+          <mat-error *ngIf="productFormGroup.controls.employee.hasError('required')"><strong>Employee</strong> field is
+            required.</mat-error>
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>Price</mat-label>
+          <input matInput formControlName="price" type="number" [errorStateMatcher]="esm">
+          <span matPrefix>$&nbsp;</span>
+          <span matSuffix>.00</span>
+          <mat-error *ngIf="productFormGroup.controls.price.hasError('required')"><strong>Price</strong> field is
+            required.</mat-error>
+          <mat-error *ngIf="productFormGroup.controls.price.hasError('min')">Please enter valid<strong>price.</strong>
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Description</mat-label>
+          <textarea matInput formControlName="description" placeholder="Description" [errorStateMatcher]="esm"
+            type="text"></textarea>
+          <mat-icon matSuffix>description</mat-icon>
+          <mat-error *ngIf="productFormGroup.controls.description.hasError('required')"><strong>Description</strong>
+            field is required.</mat-error>
+        </mat-form-field>
+      </div>
+
+    </form>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-raised-button mat-dialog-close>Cancel</button>
+    <button mat-raised-button color="primary" (click)="submit()" cdkFocusInitial>Create</button>
+  </mat-dialog-actions>
+</div>

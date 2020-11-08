@@ -1,0 +1,14 @@
+<mat-accordion *ngIf="store">
+  <mat-expansion-panel [expanded]="isPanelOpen" hideToggle hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title class="color-accent">
+        <strong>{{store.name}}</strong>
+      </mat-panel-title>
+      <mat-panel-description class="color-accent">
+        <strong>{{store.category}}</strong>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <p *ngFor="let employee of store.employees">{{employee}}</p>
+  </mat-expansion-panel>
+</mat-accordion>
+

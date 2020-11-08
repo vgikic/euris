@@ -1,0 +1,12 @@
+@import "../../../../../styles/themes.scss";
+
+table {
+  width: 100%;
+}
+tr:hover {
+  color: white;
+  background-color: mat-color($primary);
+  td, th {
+    color: white;
+  }
+}

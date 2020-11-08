@@ -1,0 +1,13 @@
+
+<euris-shop></euris-shop>
+
+<div class="container">
+  <button mat-button color="primary" (click)="openDialog()">ADD PRODUCT</button>
+  <mat-button-toggle-group class="color-accent" [(ngModel)]="dashboardType">
+    <mat-button-toggle value="GRID">GRID LAYOUT</mat-button-toggle>
+    <mat-button-toggle value="PANEL">PANEL LAYOUT</mat-button-toggle>
+  </mat-button-toggle-group>
+</div>
+
+<euris-grid-layout *ngIf="dashboardType === 'GRID'" [dashboardType]="dashBoadashboardTyperdType"></euris-grid-layout>
+<euris-panel-layout *ngIf="dashboardType == 'PANEL'"></euris-panel-layout>

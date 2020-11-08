@@ -1,0 +1,32 @@
+@import "../../../../../styles/themes.scss";
+
+.grid-container {
+  margin-bottom: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1% 0.1%;
+  grid-template-areas:
+    ". . ."
+    ". . .";
+
+  .card {
+    div:hover,
+    div:hover * {
+      color: red;
+    }
+    &:hover {
+      color: white;
+      background-color: mat-color($primary);
+      mat-card-subtitle {
+        color: white;
+      }
+    }
+  }
+
+}
+
+mat-card-actions, mat-card-header{
+  display: flex;
+  justify-content: center;
+}
